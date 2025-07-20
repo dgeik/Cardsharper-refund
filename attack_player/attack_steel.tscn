@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bppsvherpage5"]
+
+[ext_resource type="PackedScene" uid="uid://cxxdm8rjskl0x" path="res://attack_player/attack_base.tscn" id="1_ik1m5"]
+[ext_resource type="Script" path="res://attack_player/attack_steel.gd" id="2_1k3ga"]
+
+[node name="AttackSteel" instance=ExtResource("1_ik1m5")]
+script = ExtResource("2_1k3ga")

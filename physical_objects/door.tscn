@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://badvh85amovy"]
+
+[ext_resource type="Script" path="res://physical_objects/door.gd" id="1_0i0k7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13ds7"]
+radius = 69.0072
+
+[node name="Door" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_0i0k7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_13ds7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

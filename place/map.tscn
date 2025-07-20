@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc08a13e8l57q"]
+
+[ext_resource type="PackedScene" uid="uid://dkus0ggu661o0" path="res://creatures/player_map.tscn" id="1_1ntm3"]
+[ext_resource type="PackedScene" uid="uid://bbg26d1iiw0yt" path="res://physical_objects/plane.tscn" id="2_mbwjs"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PlayerMap" parent="." instance=ExtResource("1_1ntm3")]
+position = Vector2(631, 379)
+
+[node name="Plane" parent="." instance=ExtResource("2_mbwjs")]
+position = Vector2(755, 636)

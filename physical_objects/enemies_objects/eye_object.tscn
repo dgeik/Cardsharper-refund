@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cufodg3ytclrt"]
+
+[ext_resource type="Script" path="res://physical_objects/enemies_objects/eye_object.gd" id="1_dkvds"]
+[ext_resource type="Texture2D" uid="uid://teyoeijsybrw" path="res://icon.svg" id="1_odw6q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0d3h"]
+size = Vector2(54, 54)
+
+[node name="EyeObject" type="Node2D"]
+z_index = 1
+script = ExtResource("1_dkvds")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.433594, 0.433594)
+texture = ExtResource("1_odw6q")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_b0d3h")

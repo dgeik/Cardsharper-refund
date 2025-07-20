@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://3dob83q3n2ek"]
+
+[ext_resource type="Texture2D" uid="uid://teyoeijsybrw" path="res://icon.svg" id="1_jp407"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ij3u"]
+size = Vector2(38, 2111)
+
+[node name="EyeLaser" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 1059)
+scale = Vector2(0.328, 16.5312)
+texture = ExtResource("1_jp407")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1.00003, 309)
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.00003, 746.5)
+shape = SubResource("RectangleShape2D_6ij3u")

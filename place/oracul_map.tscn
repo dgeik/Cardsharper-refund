@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg3unemw78u0c"]
+
+[ext_resource type="PackedScene" uid="uid://bbg26d1iiw0yt" path="res://physical_objects/plane.tscn" id="1_wx86i"]
+[ext_resource type="PackedScene" uid="uid://cbq53hlkcrlbf" path="res://creatures/player.tscn" id="2_cqsjw"]
+[ext_resource type="PackedScene" uid="uid://cs52s8g5yy02q" path="res://creatures/enemies/eye.tscn" id="3_bi06w"]
+[ext_resource type="PackedScene" uid="uid://do3uh4tebg5lt" path="res://physical_objects/floor.tscn" id="4_d2n0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0s7cx"]
+size = Vector2(555.781, 389.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6euyi"]
+size = Vector2(539.563, 397.5)
+
+[node name="OraculMap" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(572, 136)
+zoom = Vector2(0.615, 0.615)
+
+[node name="Plane" parent="." instance=ExtResource("1_wx86i")]
+position = Vector2(-72, 459)
+
+[node name="Plane2" parent="." instance=ExtResource("1_wx86i")]
+position = Vector2(1146, 476)
+
+[node name="Player" parent="." instance=ExtResource("2_cqsjw")]
+position = Vector2(569, 379)
+
+[node name="Plane3" parent="." instance=ExtResource("1_wx86i")]
+position = Vector2(568, 464)
+
+[node name="Floor" parent="." instance=ExtResource("4_d2n0n")]
+position = Vector2(593, 694)
+
+[node name="eye_obj_center" type="Node2D" parent="."]
+position = Vector2(582, -363)
+
+[node name="eye_obj_left" type="Node2D" parent="."]
+position = Vector2(-79, -363)
+
+[node name="eye_obj_right" type="Node2D" parent="."]
+position = Vector2(1166, -363)
+
+[node name="eye_obj_down_right" type="Node2D" parent="."]
+position = Vector2(1532, 582)
+
+[node name="eye_obj_down_left" type="Node2D" parent="."]
+position = Vector2(-378, 582)
+
+[node name="right_stars" type="Area2D" parent="."]
+position = Vector2(1714, -617)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_stars"]
+position = Vector2(-9, -8)
+shape = SubResource("RectangleShape2D_0s7cx")
+
+[node name="left_stars" type="Area2D" parent="."]
+position = Vector2(-498, -612)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_stars"]
+position = Vector2(8, 1)
+shape = SubResource("RectangleShape2D_6euyi")
+
+[node name="enemy_attack" type="Node2D" parent="."]
+
+[node name="Eye" parent="." instance=ExtResource("3_bi06w")]
+position = Vector2(1473, 136)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba37erhc6rtsh"]
+
+[ext_resource type="PackedScene" uid="uid://cxxdm8rjskl0x" path="res://attack_player/attack_base.tscn" id="1_1pmu7"]
+[ext_resource type="Script" path="res://attack_player/attack_laminar.gd" id="2_klfn5"]
+
+[node name="AttackLaminar" instance=ExtResource("1_1pmu7")]
+script = ExtResource("2_klfn5")

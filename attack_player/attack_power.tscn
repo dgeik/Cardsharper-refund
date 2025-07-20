@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxby4b8r30icu"]
+
+[ext_resource type="PackedScene" uid="uid://cxxdm8rjskl0x" path="res://attack_player/attack_base.tscn" id="1_6chyy"]
+[ext_resource type="Script" path="res://attack_player/attack_power.gd" id="2_fegy8"]
+
+[node name="AttackPower" instance=ExtResource("1_6chyy")]
+script = ExtResource("2_fegy8")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.105469, 0.285156)

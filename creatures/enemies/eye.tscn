@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs52s8g5yy02q"]
+
+[ext_resource type="PackedScene" uid="uid://t7o0i5fd2v3s" path="res://creatures/enemies/enemy.tscn" id="1_cgh3j"]
+[ext_resource type="Script" path="res://creatures/enemies/eye.gd" id="2_rumkb"]
+
+[node name="Eye" instance=ExtResource("1_cgh3j")]
+script = ExtResource("2_rumkb")
+
+[node name="eye_attack_special" type="Node2D" parent="." index="3"]
+scale = Vector2(0.5, 0.5)

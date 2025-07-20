@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bffqhluroy6xi"]
+
+[ext_resource type="PackedScene" uid="uid://t7o0i5fd2v3s" path="res://creatures/enemies/enemy.tscn" id="1_w0vu4"]
+[ext_resource type="Script" path="res://creatures/enemies/Oracul.gd" id="2_cd3a5"]
+
+[node name="Oracul" instance=ExtResource("1_w0vu4")]
+script = ExtResource("2_cd3a5")

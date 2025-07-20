@@ -1,0 +1,14 @@
+{
+	"eye":{
+		"hp": 150,
+		"damage": 1
+	},
+	"reader":{
+		"hp": 150,
+		"damage": 1
+	},
+	"oracul":{
+		"hp": 200,
+		"damage": 1
+	}
+}

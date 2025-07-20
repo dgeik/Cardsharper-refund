@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://t7o0i5fd2v3s"]
+
+[ext_resource type="Script" path="res://creatures/enemies/enemy.gd" id="1_eshtx"]
+[ext_resource type="Texture2D" uid="uid://teyoeijsybrw" path="res://icon.svg" id="2_wavhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvh2v"]
+size = Vector2(42, 168)
+
+[node name="Enemy" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_eshtx")
+
+[node name="hitboxBullets" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxBullets"]
+shape = SubResource("RectangleShape2D_uvh2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.296875, 1.26563)
+texture = ExtResource("2_wavhy")
+
+[node name="hitboxPlayer" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxPlayer"]
+shape = SubResource("RectangleShape2D_uvh2v")
+
+[connection signal="body_entered" from="hitboxBullets" to="." method="_on_hitbox_bullets_body_entered"]
+[connection signal="body_entered" from="hitboxPlayer" to="." method="_on_hitbox_player_body_entered"]

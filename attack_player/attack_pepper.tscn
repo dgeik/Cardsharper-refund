@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bikbvo3l2hkh0"]
+
+[ext_resource type="PackedScene" uid="uid://cxxdm8rjskl0x" path="res://attack_player/attack_base.tscn" id="1_qtkhr"]
+[ext_resource type="Script" path="res://attack_player/attack_pepper.gd" id="2_vo7q5"]
+
+[node name="AttackPepper" instance=ExtResource("1_qtkhr")]
+script = ExtResource("2_vo7q5")
